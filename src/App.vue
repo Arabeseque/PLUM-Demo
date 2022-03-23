@@ -28,7 +28,9 @@ function getEndPoint(b: Branch) {
     y: b.start.y + b.length * Math.sin(b.theta),
   }
 }
-
+function drawBranch(b: Branch) {
+  lineTo(b.start, getEndPoint(b))
+}
 const pendingTasks: Function[] = []
 function step(b: Branch, depth = 0) {
   const end = getEndPoint(b)
@@ -65,9 +67,6 @@ function startFrame() {
 }
 startFrame()
 
-function drawBranch(b: Branch) {
-  lineTo(b.start, getEndPoint(b))
-}
 function init() {
   ctx.strokeStyle = '#fff'
   const branch = {
