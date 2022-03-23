@@ -87,10 +87,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <canvas ref="el" width="600" height="600" border>
-  <!-- <main font-sans p="x-4 y-10" text="center gray-700 dark:gray-200">
-    <router-view />
-  </main> -->
-  </canvas>
-  <Footer />
-</template>
+  <main font-sans p="x-4 y-10" text="center gray-700 dark:gray-200">
+    <div flex justify-center>
+      <canvas ref="el" width="600" height="600" border />
+    </div>
+
+    <Footer />
+  </main>
+</template>q
